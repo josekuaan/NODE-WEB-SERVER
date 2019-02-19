@@ -2,7 +2,7 @@ const express =require('express');
 const hbs = require('hbs')
 const fs = require('fs')
 
-
+const port = process.env.PORT || 3000;
 const app = express();
 hbs.registerPartials(__dirname +'/views/partials')
 app.set('views engins', 'hbs')
@@ -52,4 +52,6 @@ app.get('/bad', (req,res) =>{
     res.send('this is a bad request')
 })
 
-app.listen(3000)
+app.listen(port, ()=>{
+    console.log(`connection has being made to port ${port}`)
+})

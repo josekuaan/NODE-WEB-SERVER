@@ -19,11 +19,12 @@ app.use((req,res,next) =>{
     next();
 });
 
-app.use((req,res,next) =>{
-    res.render('maintainance.hbs',{
-        pageTitle: 'This site is currently running on maintainance mood'
-    })
-})
+// app.use((req,res,next) =>{
+//     res.render('maintainance.hbs',{
+//         pageTitle: 'This site is currently running on maintainance mood'
+//     })
+//     next();
+// })
 
 app.use(express.static(__dirname + '/public'));
 

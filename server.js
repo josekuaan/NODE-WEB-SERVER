@@ -48,6 +48,13 @@ app.get('/about', (req,res)=>{
         pageTitle: 'about page'
     })
 });
+
+app.get('/project',(req,res) =>{
+    res.render('project.hbs',{
+        pageTitle:"Project file"
+    })
+});
+
 app.get('/bad', (req,res) =>{
     res.send('this is a bad request')
 })
